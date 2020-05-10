@@ -24,7 +24,7 @@ namespace StateApp
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<StateAppContext>(options => options.UseSqlServer(connection));
-            services.AddControllersWithViews();
+            services.AddControllers();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -36,7 +36,10 @@ namespace StateApp
             app.UseRouting();
             app.UseEndpoints(endpoints =>
             {
-                endpoints.MapControllers();
+                //endpoints.MapControllers();
+                endpoints.MapControllerRoute(
+                    name: "default",
+                    pattern: "{controller=Economies}/{id?}");
             });
         }
     }

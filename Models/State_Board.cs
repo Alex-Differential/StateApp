@@ -14,6 +14,7 @@ namespace StateApp.Models
             Countries = new List<Country_World>();
             Goverments = new List<Goverment>();
         }
+        [Key]
         public int SD_ID { get; set; }
         [Required(ErrorMessage = "Поле не повинно бути порожнім")]
         [Display(Name = "ДержУправління")]

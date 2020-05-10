@@ -13,6 +13,8 @@ namespace StateApp.Models
         {
             Countries = new List<Country_World>();
         }
+
+        [Key]
         public int PS_ID { get; set; }
         [Required(ErrorMessage ="Поле не повинно бути порожнім")]
         [Display(Name = "Держустрій")]

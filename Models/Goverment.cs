@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -11,6 +12,7 @@ namespace StateApp.Models
         {
             Econ_Cos_Infos = new List<Econ_Cos_Info>();
         }
+        [Key]
         public int GV_ID { get; set; }
         public string GV_Name { get; set; }
         public virtual State_Board GV_State_Board { get; set; }

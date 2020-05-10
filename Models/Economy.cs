@@ -12,6 +12,7 @@ namespace StateApp.Models
         {
             Goverments = new List<Goverment>();
         }
+        [Key]
         public int EC_ID { get; set; }
         [Required(ErrorMessage = "Поле не повинно бути порожнім")]
         [Display(Name = "Тип економіки")]
