@@ -10,8 +10,10 @@ namespace StateApp.Models
     {
         [Key]
         public int EI_ID { get; set; }
-        public virtual Country_World EI_Name { get; set; }
-        public virtual Goverment EI_Gov { get; set; }
+        public int EI_Name { get; set; }
+        public virtual Country_World Country_World { get; set; }
+        public int EI_Gov { get; set; }
+        public virtual Goverment Goverment { get; set; }
         public int EI_VVP { get; set; }
         public int EI_Life { get; set; }
         public int EI_Inflation { get; set; }

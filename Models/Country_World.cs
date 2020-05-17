@@ -18,8 +18,9 @@ namespace StateApp.Models
         public string CO_PartWorld { get; set; }
         public int CO_Squere {get; set;}
         public int CO_Population { get; set; }
-        
-        public virtual Polit_System CO_Polit_Sys { get; set; }
+        public int CO_Polit_SysPS_ID { get; set; }
+        public virtual Polit_System CO_Polit_Sys{ get; set; }
+        public int CO_State_BoardSD_ID { get; set; }
         public virtual State_Board CO_State_Board { get; set; }
         public virtual ICollection<Econ_Cos_Info> Econ_Cos_Infos { get; set; }
     }

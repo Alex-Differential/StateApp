@@ -24,7 +24,7 @@ namespace StateApp
         {
             string connection = Configuration.GetConnectionString("DefaultConnection");
             services.AddDbContext<StateAppContext>(options => options.UseSqlServer(connection));
-            services.AddControllers();
+            services.AddControllers().AddNewtonsoftJson();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -33,13 +33,16 @@ namespace StateApp
             {
                 app.UseDeveloperExceptionPage();
             }
+            app.UseDefaultFiles();
+            app.UseStaticFiles();
+
             app.UseRouting();
             app.UseEndpoints(endpoints =>
             {
-                //endpoints.MapControllers();
-                endpoints.MapControllerRoute(
-                    name: "default",
-                    pattern: "{controller=Economies}/{id?}");
+                endpoints.MapControllers();
+                //endpoints.MapControllerRoute(
+                //    name: "default",
+                //    pattern: "{controller=Economies}/{id?}");
             });
         }
     }

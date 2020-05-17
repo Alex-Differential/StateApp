@@ -15,8 +15,10 @@ namespace StateApp.Models
         [Key]
         public int GV_ID { get; set; }
         public string GV_Name { get; set; }
-        public virtual State_Board GV_State_Board { get; set; }
-        public virtual Economy GV_Economy { get; set; }
+        public int GV_State_Board { get; set; }
+        public virtual State_Board State_Board { get; set; }
+        public int  GV_Economy { get; set; }
+        public virtual Economy Economy { get; set; }
         public virtual ICollection<Econ_Cos_Info> Econ_Cos_Infos { get; set; }
     }
 }

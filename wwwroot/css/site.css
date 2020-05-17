@@ -1,0 +1,29 @@
+﻿body {
+    font-size: 13px;
+    font-family: Verdana, Arial, Helvetica, Sans-Serif;
+    background-color: #f7f7fa;
+    padding-left: 40px;
+}
+
+h {
+    background-color: red;
+}
+
+button {
+    width: 150px;
+    color: #fff;
+    background-color: #1cff77;
+    border-radius: 5px;
+}
+th {
+    background-color: #f98b0c;
+    border: none;
+}
+td {
+    border: none;
+    background-color: #d8d8d8;
+}
+table {
+    background-color: #d0cdcd;
+    border: none;
+}

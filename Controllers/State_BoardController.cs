@@ -82,7 +82,8 @@ namespace StateApp.Controllers
             _context.State_Boards.Add(state_Board);
             await _context.SaveChangesAsync();
 
-            return CreatedAtAction("GetState_Board", new { id = state_Board.SD_ID }, state_Board);
+            //return CreatedAtAction("GetState_Board", new { id = state_Board.SD_ID }, state_Board);
+            return CreatedAtAction(nameof(GetState_Board), new { id = state_Board.SD_ID }, state_Board);
         }
 
         // DELETE: api/State_Board/5
